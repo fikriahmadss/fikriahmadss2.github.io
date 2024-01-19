@@ -71,16 +71,16 @@ mymap.addLayer(backgroundLayer);
 var mymarker = L.marker([-6.239207157274095, 106.99462755391198]);
 mymarker.addTo(mymap);
 mymarker.bindPopup("<h5 class='text-center'>Kab Bekasi</h5><hr><a href='https://id.wikipedia.org/wiki/Kabupaten_Bekasi target='blank'><img src=img/bekasi.jpg' width='150px'></a>");
-var geojsonarealayer = new L.GeoJSON.AJAX["data/DESA.geohson"]).addTo(mymap);
-var geojsonlinelayer = new L.GeoJSON.AJAX["data/linedesa.geohson"]).addTo(mymap);
-var geojsonpointlayer = new L.GeoJSON.AJAX["data/industri.geohson"]).addTo(mymap);
+var geojsonarealayer = new L.GeoJSON.AJAX["data/Area.geojson"]).addTo(mymap);
+var geojsonlinelayer = new L.GeoJSON.AJAX["data/Line.geojson"]).addTo(mymap);
+var geojsonpointlayer = new L.GeoJSON.AJAX["data/Point.geojson"]).addTo(mymap);
 var baseMaps = {
 "Area" : geojsonarealayer,
 "Line" : geojsonlinelayer,
 }
 
 var overlays = {
-"industri" : geojsonpointlayer,
+"Point" : geojsonpointlayer,
 }
 
 L.control.layer(baseMaps, overLays).addTo(mymap);
